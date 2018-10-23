@@ -3,6 +3,13 @@ package anonima;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Se evalua de un listado de numeros generados al azar cuales de sus miembros
+ * son números primos y se muestran en una lista independiente.
+ * 
+ * @author LWY
+ */
+
 public class Primos {
 
     public static void main(String[] args) {
