@@ -36,7 +36,7 @@ public class FactoresPrimos {
         //que el número no es primo y retorna false. Caso contrario retorna true
         //inidicando que es número primo ya que solo se puede dividir por el mismo
         //y por 1 (dos resultados enteros)
-        return cont < 3;
+        return cont < 3; 
     }
 
     //metodo que evalua los factores primos de un numero entero positivo
