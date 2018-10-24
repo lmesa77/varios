@@ -86,7 +86,6 @@ public class FactoresPrimos {
 
             //si lo es...
             if (pPrimo == true) {
-
                 //evalua si la division es exacta al dividir por el primer
                 //numero primo del listado
                 if (aux % primo == 0) {
