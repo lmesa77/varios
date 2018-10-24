@@ -1,9 +1,20 @@
 package com.lwy.varios;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
- * Buscamos los factores primos de un número entero positivo
+ * En teoría de números, los factores primos de un número entero son los números
+ * primos divisores exactos de ese número entero. El proceso de búsqueda de esos
+ * divisores se denomina factorización de enteros, o factorización en números
+ * primos. Para un factor primo es p de n, la multiplicidad de p es el máximo
+ * exponente a para el cual pa es un divisor de n. La factorización de un número
+ * entero es una lista de los factores primos de ese número, junto con su
+ * multiplicidad.
+ *
+ * El Teorema fundamental de la Aritmética establece que todo número entero
+ * positivo tiene una factorización de primos única. (Wikipedia)
  *
  * @author LWY
  */
@@ -43,6 +54,7 @@ public class FactoresPrimos {
     private void evaluar() {
 
         //Recibimos el número a evaluar desde la terminal
+        System.out.println("DIGITE UN NÚMERO:");
         Scanner entradaEscaner = new Scanner(System.in);
         int numero = entradaEscaner.nextInt();
 
@@ -64,7 +76,7 @@ public class FactoresPrimos {
         boolean sPrimo;
 
         //cadena donde se concatenan los primos evaluados positivos
-        String resultado = "";
+        List<Integer> listPrimos = new ArrayList();
 
         //se inicia un ciclo que finaliza al ser encontrados todos los factores primos
         while (band == false) {
@@ -81,14 +93,14 @@ public class FactoresPrimos {
 
                     //guarda el resultado y el numero que lo dividio exactamente
                     aux = aux / primo;
-                    resultado = resultado + " " + primo;
+                    listPrimos.add(primo);
 
                     //evaluamos si el nuevo resultado es un número primo
                     sPrimo = isPrimo(aux);
 
                     //si el resultado es verdadero, termina el proceso
                     if (sPrimo == true) {
-                        resultado = resultado + " " + aux;
+                        listPrimos.add(aux);
                         band = true;
                     }
 
@@ -103,7 +115,43 @@ public class FactoresPrimos {
             }
         }
 
-        //muestra el mensaje final con el resultado
-        System.out.println("Los factores primos de " + numero + " son:" + resultado);
+        mostrarResultado(listPrimos);
+    }
+
+    private void mostrarResultado(List lista) {
+
+        int base = 0;
+        int exp = 0;
+        String resultado = "";
+
+        base = (int) lista.get(0);
+
+        for (int i = 0; i < lista.size(); i++) {
+
+            if (base == (int) lista.get(i)) {
+                exp++;
+            } else {
+                if (exp == 1) {
+                    resultado = resultado + base + " * ";
+                    base = (int) lista.get(i);
+                    exp = 0;
+                    i--;
+                } else {
+                    resultado = resultado + "(" + base + "^" + exp + ") * ";
+                    base = (int) lista.get(i);
+                    exp = 0;
+                    i--;
+                }
+            }
+        }
+        if (exp == 1) {
+            resultado = resultado + base;
+        } else {
+            resultado = resultado + "(" + base + "^" + exp + ")";
+        }
+        System.out.println(resultado);
+
     }
 }
+
+//avaluar 478523
