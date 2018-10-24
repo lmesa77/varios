@@ -19,7 +19,7 @@ public class Primos {
 
         //llenamos aleatoreamente la lista
         for (int i = 0; i < 100; i++) {
-            numeros.add((int) (Math.random() * 1000) + 1);
+            numeros.add((int) (Math.random() * 100000) + 1);
         }
 
         //declara un contador
@@ -35,7 +35,7 @@ public class Primos {
             //para entontrar sus divisiones exactas
             for (int j = 0; j < numeros.get(i); j++) {
 
-                //al haber divicion exacta el contador aumenta en 1
+                //al haber division exacta el contador aumenta en 1
                 if (numeros.get(i) % (j + 1) == 0) {
                     res = res + 1;
                 }
