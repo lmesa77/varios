@@ -44,9 +44,9 @@ public class Palindromo {
 
         //mostramos el resultado
         if (isEquals == true) {
-            System.out.println("La frase: " + entrada + " SI es un palindromo");
+            System.out.println("La frase: " + entrada + " SI es un palíndromo");
         } else {
-            System.out.println("La frase: " + entrada + " NO es un palindromo");
+            System.out.println("La frase: " + entrada + " NO es un palíndromo");
         }
     }
 }
