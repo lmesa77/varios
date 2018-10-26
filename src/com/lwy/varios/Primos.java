@@ -51,7 +51,7 @@ public class Primos {
         }
 
         //mostramos el resultado
-        System.out.println("Lista a evaluar: " + numeros+"\n");
+        System.out.println("Lista a evaluar: " + numeros + "\n");
         System.out.println("Lista de números primos: " + resultado);
     }
 
