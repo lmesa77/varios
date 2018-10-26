@@ -19,7 +19,7 @@ public class Primos {
 
         //llenamos aleatoreamente la lista
         for (int i = 0; i < 100; i++) {
-            numeros.add((int) (Math.random() * 100000) + 1);
+            numeros.add((int) (Math.random() * 100) + 1);
         }
 
         //declara un contador
