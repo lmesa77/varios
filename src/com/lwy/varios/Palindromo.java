@@ -20,9 +20,11 @@ public class Palindromo {
         Scanner scn = new Scanner(System.in);
         String entrada = scn.nextLine();
 
-        //le quitamos espacios y dejamos en minusculas
+        //le quitamos espacios, signos de puntuación y dejamos en minusculas
         String frase = entrada.toLowerCase();
         frase = frase.replace(" ", "");
+        frase = frase.replace(".", "");
+        frase = frase.replace(",", "");
 
         //pasamos aun vector
         char[] vector = frase.toCharArray();
