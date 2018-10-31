@@ -115,10 +115,4 @@ public class Fracciones {
 
         return n;
     }
-
-    @Override
-    public String toString() {
-        return num + "/" + den;
-    }
-
 }
