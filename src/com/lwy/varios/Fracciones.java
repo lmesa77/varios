@@ -9,6 +9,7 @@ public class Fracciones {
     private int num;
     private int den;
     private double dec;
+    public static int numX=0;
 
     public Fracciones(int num, int den) {
         this.num = num;
@@ -114,5 +115,9 @@ public class Fracciones {
         }
 
         return n;
+    }
+
+    public static int hola(int num1, int num2) {
+        return num1 + num2;
     }
 }
